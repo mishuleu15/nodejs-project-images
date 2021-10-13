@@ -1,11 +1,17 @@
 const express = require('express');
+const fs = require('fs');
 
 const app = express();
 
-const PORT = 3000;
+const PORT = 8000;
+
+const tempCard = fs.readFileSync(
+  `${__dirname}/templates/template-card.html`,
+  'utf-8'
+);
 
 app.get('/', (req, res) => {
-  res.send('<h1>Hello World!</h1>');
+  res.status(200).send(tempCard);
 });
 
 app.listen(PORT, () => {
