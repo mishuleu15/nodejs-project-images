@@ -10,6 +10,11 @@ const tempCard = fs.readFileSync(
   'utf-8'
 );
 
+const data = fs.readFileSync(`${__dirname}/data.json`, 'utf-8');
+
+const dataObj = JSON.parse(data);
+console.log(dataObj);
+
 app.get('/', (req, res) => {
   res.status(200).send(tempCard);
 });
