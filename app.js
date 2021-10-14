@@ -5,6 +5,11 @@ const app = express();
 
 const PORT = 8000;
 
+const replaceTemplate = (temp, element) => {
+  let output = temp.replace(/{%TITLE%}/g, element.title);
+  return output;
+};
+
 const tempCard = fs.readFileSync(
   `${__dirname}/templates/template-card.html`,
   'utf-8'
@@ -13,10 +18,11 @@ const tempCard = fs.readFileSync(
 const data = fs.readFileSync(`${__dirname}/data.json`, 'utf-8');
 
 const dataObj = JSON.parse(data);
-console.log(dataObj);
 
 app.get('/', (req, res) => {
-  res.status(200).send(tempCard);
+  const cardsHtml = dataObj.map((el) => replaceTemplate(tempCard, el)).join('');
+  const output = tempCard.replace('{%TITLE%}', cardsHtml);
+  res.status(200).send(output);
 });
 
 app.listen(PORT, () => {
