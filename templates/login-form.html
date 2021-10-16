@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+      }
+      html {
+        font-family: 'Baloo 2', cursive;
+      }
+
+      body {
+        background: url('https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80')
+          no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .container h1 {
+        margin-top: -400px;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+      }
+
+      a {
+        margin-left: 100px;
+        margin-bottom: 400px;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        background-color: #6495ed;
+        padding: 0.7rem 2rem;
+        align-self: flex-start;
+        color: white;
+        font-size: large;
+        letter-spacing: 1.2px;
+      }
+
+      a:hover {
+        filter: brightness(90%);
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #f8f8ff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0px 10px 15px 5px #0808085e;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        margin-bottom: 200px;
+      }
+
+      form label {
+        align-self: flex-start;
+        margin: 1rem 0 0.5rem 0;
+      }
+
+      form input {
+        width: 300px;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        border: none;
+      }
+
+      form input:focus,
+      form input:active {
+        outline: none;
+      }
+
+      form input:last-child {
+        margin-top: 1rem;
+        width: 30%;
+        border: none;
+        background-color: #6495ed;
+        border-radius: 10px;
+        padding: 0.75rem 1.25rem;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        color: #fff;
+      }
+
+      form input:last-child:hover {
+        filter: brightness(110%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="http://localhost:8000">BACK</a>
+      <h1>Login</h1>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="First Name" />
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" placeholder="Last Name" />
+        <label for="password">Password</label>
+        <input type="password" id="password" value="Password" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

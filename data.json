@@ -1,1 +1,8 @@
-[{ "id": 0, "title": "Image Gallery" }]
+[
+  {
+    "id": 0,
+    "title": "Image Gallery",
+    "login": "Log In",
+    "submit": "Submit a photo"
+  }
+]
